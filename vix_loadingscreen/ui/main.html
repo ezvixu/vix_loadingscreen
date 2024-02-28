@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vixuloading</title>
+</head>
+<body>
+<div>
+    <div class="tyl"> 
+        <iframe width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/5P7i9jV9jew?&controls=0&rel=0&showinfo=0&autoplay=1&loop=1&start=1&mute=1" frameborder="0" allow="autoplay; fullscreen" ></iframe>
+        <audio id="sound" src="audio.mp3" autoplay="true" hidden="true" loop="true"></audio>
+    </div>
+
+    <div class="logo">
+            <img src="img/logo.png" id="logo" height="120" width="120" id="obraz">
+            <div class="text2">
+                <h5>TwojaNazwaRP</h5>
+            </div>
+            <div class="balackout"></div>
+            <div class="linia1"></div>
+            <div class="linia2"></div>
+            <div class="linia3"></div>
+            <div class="linia4"></div>
+            <div class="text">
+                <h5>Łączenie z serverem...</h5>
+            </div>
+
+            <div class="text3">
+                <h5>discord.gg/twojserver</h5>
+            </div>
+    </div>
+
+    <figure>
+        <div class="face top"><p id="s"></p></div>
+        <div class="face front"><p id="m"></p></div>
+        <div class="face left"><p id="h"></p></div>
+      </figure>
+      <script type="text/javascript">
+        function date_time(id)
+{
+        date = new Date;
+        h = date.getHours();
+        if(h<10)
+        {
+                h = "0"+h;
+        }
+        m = date.getMinutes();
+        if(m<10)
+        {
+                m = "0"+m;
+        }
+        s = date.getSeconds();
+        if(s<10)
+        {
+                s = "0"+s;
+        }
+        document.getElementById("s").innerHTML = ''+s;
+        document.getElementById("m").innerHTML = ''+m;
+        document.getElementById("h").innerHTML = ''+h;
+        setTimeout('date_time("'+"s"+'");','1000');
+        return true;
+}
+window.onload = date_time('s');
+      </script>
+    
+
+</div>
+</body>
+
+</html>
